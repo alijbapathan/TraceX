@@ -1,0 +1,9 @@
+build/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/*.txt
+data/*.json
+*.log
+.vscode/
+.idea/

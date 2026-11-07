@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceX - Failure Investigation Engine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">X</div>
+                <span>TraceX</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="explorer.html" class="nav-link">Log Explorer</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="graph.html" class="nav-link">Dependency Graph</a></li>
+                <li><a href="report.html" class="nav-link">Analysis Report</a></li>
+            </ul>
+            <div class="nav-actions">
+                <select id="run-selector" class="run-select">
+                    <option value="">Loading runs...</option>
+                </select>
+                <button id="upload-btn" class="btn btn-primary">+ Upload Log</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Notice banner -->
+        <div class="notice-box">
+            <strong>Investigation Engine Notice:</strong> All root cause determinations represent an <em>evidence-based hypothesis</em> derived from temporal clustering and heuristic correlation, not a definitively confirmed ground truth.
+        </div>
+
+        <!-- Controls row -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div>
+                <h1 style="font-size: 1.5rem; font-weight: 700;">Live Monitoring & Engine Overview</h1>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">Continuous log stream aggregation, failure cascade metrics, and diagnostic indicators.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+                <button id="live-toggle-btn" class="btn btn-outline">
+                    <span id="live-indicator" style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#64748b; margin-right:4px;"></span>
+                    Live Mode: OFF
+                </button>
+                <button id="refresh-btn" class="btn btn-secondary">Refresh</button>
+            </div>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="grid grid-cols-4" style="margin-bottom: 1.5rem;">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Total Log Events</span>
+                    <span class="badge badge-info">Processed</span>
+                </div>
+                <div class="card-value" id="card-total">0</div>
+                <div class="card-subtitle" id="card-total-sub">Awaiting run data...</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Errors & Fatalities</span>
+                    <span class="badge badge-error">Critical</span>
+                </div>
+                <div class="card-value" id="card-errors" style="color: var(--accent-red);">0</div>
+                <div class="card-subtitle" id="card-errors-sub">0 fatal events</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Warnings</span>
+                    <span class="badge badge-warn">Caution</span>
+                </div>
+                <div class="card-value" id="card-warnings" style="color: var(--accent-amber);">0</div>
+                <div class="card-subtitle">Elevated latency / retries</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Hypothesis Root Cause</span>
+                    <span class="badge badge-root" id="card-confidence-badge">--% CONF</span>
+                </div>
+                <div class="card-value" id="card-root" style="font-size: 1.4rem; color: #fca5a5;">NONE</div>
+                <div class="card-subtitle" id="card-root-sub">Evidence-based assessment</div>
+            </div>
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="grid grid-cols-2" style="margin-bottom: 1.5rem;">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Errors Per Minute Timeline</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">Cascade Burst Detection</span>
+                </div>
+                <div style="height: 280px; position: relative;">
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Errors by Subsystem / Source</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">Impact Breakdown</span>
+                </div>
+                <div style="height: 280px; position: relative; display: flex; align-items: center; justify-content: center;">
+                    <canvas id="sourceChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Upload / Demo section -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Ready-Made Evaluation Scenarios</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Pre-generated Failure Cascades</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+                <button class="btn btn-outline demo-btn" data-file="sample_logs/db_timeout.log">Load: DB Timeout Cascade</button>
+                <button class="btn btn-outline demo-btn" data-file="sample_logs/memory_leak.log">Load: OutOfMemory Pressure</button>
+                <button class="btn btn-outline demo-btn" data-file="sample_logs/network_outage.log">Load: Network Gateway Outage</button>
+                <button class="btn btn-outline demo-btn" data-file="sample_logs/auth_failure.log">Load: Auth Token Burst</button>
+                <button class="btn btn-outline demo-btn" data-file="sample_logs/db_timeout.csv">Load: CSV Format Log</button>
+                <button class="btn btn-outline demo-btn" data-file="sample_logs/db_timeout.json">Load: JSON-Lines Format Log</button>
+                <button class="btn btn-outline demo-btn" data-file="sample_logs/large_benchmark_10k.log">Load: 10,000 Lines Benchmark</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="font-size: 1.15rem; font-weight: 700;">Upload Software Log File</h3>
+                <button id="close-modal-btn" style="background:none; border:none; color:var(--text-muted); font-size:1.5rem; cursor:pointer;">&times;</button>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                Supports Text (<code>YYYY-MM-DD HH:MM:SS LEVEL SOURCE MSG</code>), CSV (<code>ts,level,source,msg</code>), and JSON-lines formats.
+            </p>
+            <div id="drop-zone" style="border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 2.5rem 1.5rem; text-align: center; cursor: pointer; transition: all 0.2s;">
+                <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent-blue);">📂</div>
+                <p style="font-weight: 600; font-size: 0.95rem;">Drag and drop log file here</p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">or click to browse from disk</p>
+                <input type="file" id="file-input" style="display: none;" accept=".log,.txt,.csv,.json,.jsonl">
+            </div>
+            <div id="upload-status" style="margin-top: 1rem; font-size: 0.85rem; display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        TraceX Software Failure Investigation Engine &bull; C++17 Core Engine &bull; OOP Course Project
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

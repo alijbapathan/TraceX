@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceX - Log Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">X</div>
+                <span>TraceX</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="explorer.html" class="nav-link active">Log Explorer</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="graph.html" class="nav-link">Dependency Graph</a></li>
+                <li><a href="report.html" class="nav-link">Analysis Report</a></li>
+            </ul>
+            <div class="nav-actions">
+                <select id="run-selector" class="run-select">
+                    <option value="">Loading runs...</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div>
+                <h1 style="font-size: 1.5rem; font-weight: 700;">Log Explorer & Filter Engine</h1>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">High-performance search, source indexing, and subsystem error isolation.</p>
+            </div>
+            <div>
+                <button id="reset-filters-btn" class="btn btn-outline">Reset Filters</button>
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="card" style="margin-bottom: 1.25rem; padding: 1rem 1.25rem;">
+            <div class="filter-row" style="margin-bottom: 0;">
+                <div style="flex: 2; min-width: 200px;">
+                    <input type="text" id="search-input" class="input-text" style="width: 100%;" placeholder="Search message text, endpoints, codes...">
+                </div>
+
+                <div>
+                    <select id="level-select" class="select-input">
+                        <option value="">All Levels</option>
+                        <option value="INFO">INFO</option>
+                        <option value="WARN">WARN</option>
+                        <option value="ERROR">ERROR</option>
+                        <option value="FATAL">FATAL</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select id="source-select" class="select-input">
+                        <option value="">All Sources</option>
+                        <option value="DATABASE">DATABASE</option>
+                        <option value="API">API</option>
+                        <option value="NETWORK">NETWORK</option>
+                        <option value="MEMORY">MEMORY</option>
+                        <option value="AUTH">AUTH</option>
+                        <option value="CACHE">CACHE</option>
+                        <option value="DISK">DISK</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="text" id="from-input" class="input-text" placeholder="From: YYYY-MM-DD HH:MM:SS" style="width: 170px;">
+                </div>
+
+                <div>
+                    <input type="text" id="to-input" class="input-text" placeholder="To: YYYY-MM-DD HH:MM:SS" style="width: 170px;">
+                </div>
+
+                <div>
+                    <button id="apply-filter-btn" class="btn btn-primary">Filter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Log Table Card -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <span class="card-title">Event Stream</span>
+                    <span id="log-count-summary" style="font-size: 0.8rem; color: var(--text-muted); margin-left: 0.75rem;">Showing 0 events</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">Rows per page:</span>
+                    <select id="limit-select" class="select-input" style="padding: 0.2rem 0.5rem;">
+                        <option value="25">25</option>
+                        <option value="50" selected>50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="logs-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">#ID</th>
+                            <th style="width: 160px;">Timestamp</th>
+                            <th style="width: 80px;">Level</th>
+                            <th style="width: 110px;">Source</th>
+                            <th style="width: 140px;">Classified Type</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logs-tbody">
+                        <tr>
+                            <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 2rem;">Loading logs...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination Bar -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle);">
+                <div id="page-info" style="font-size: 0.85rem; color: var(--text-secondary);">Page 1 of 1</div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <button id="prev-page-btn" class="btn btn-outline" disabled>&laquo; Previous</button>
+                    <button id="next-page-btn" class="btn btn-outline" disabled>Next &raquo;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Event Detail Modal -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 id="modal-title" style="font-size: 1.15rem; font-weight: 700;">Event Details</h3>
+                <button id="close-detail-modal" style="background:none; border:none; color:var(--text-muted); font-size:1.5rem; cursor:pointer;">&times;</button>
+            </div>
+            <div id="modal-body" class="mono" style="background: var(--bg-dark); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.8rem; overflow-x: auto; white-space: pre-wrap;"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        TraceX Software Failure Investigation Engine &bull; C++17 Core Engine
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/explorer.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceX - Dependency Graph</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">X</div>
+                <span>TraceX</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="explorer.html" class="nav-link">Log Explorer</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="graph.html" class="nav-link active">Dependency Graph</a></li>
+                <li><a href="report.html" class="nav-link">Analysis Report</a></li>
+            </ul>
+            <div class="nav-actions">
+                <select id="run-selector" class="run-select">
+                    <option value="">Loading runs...</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div>
+                <h1 style="font-size: 1.5rem; font-weight: 700;">Event Dependency & Failure Cascade Graph</h1>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">Directed causal topology linking root event origin to downstream failure cascades.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <label style="font-size: 0.85rem; color: var(--text-secondary);">Strategy:</label>
+                <select id="graph-strategy-select" class="select-input">
+                    <option value="rule" selected>Rule-Based Correlation</option>
+                    <option value="window">Sliding Time-Window</option>
+                </select>
+                <button id="reset-view-btn" class="btn btn-secondary">Reset View</button>
+            </div>
+        </div>
+
+        <!-- Graph Card -->
+        <div class="grid grid-cols-3" style="grid-template-columns: 2.2fr 1fr; gap: 1.25rem;">
+            <div class="card" style="padding: 0.75rem;">
+                <div id="network-graph"></div>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0.5rem 0.25rem; font-size: 0.8rem; color: var(--text-muted);">
+                    <div>Scroll to zoom &bull; Drag to pan &bull; Click node to inspect details</div>
+                    <div style="display: flex; gap: 1rem;">
+                        <span style="display:flex; align-items:center; gap:4px;"><span style="width:12px; height:12px; border-radius:50%; background:#ef4444;"></span> Possible Root Cause</span>
+                        <span style="display:flex; align-items:center; gap:4px;"><span style="width:12px; height:12px; border-radius:50%; background:#f59e0b;"></span> Cascaded Failure</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node Details Panel -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Node Inspector</span>
+                    <span id="inspector-badge" class="badge badge-info">Select a node</span>
+                </div>
+                <div id="inspector-empty" style="padding: 3rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+                    Click any node in the topology graph to inspect its timestamp, level, source component, and causality relations.
+                </div>
+                <div id="inspector-content" style="display: none;">
+                    <div style="margin-bottom: 1rem;">
+                        <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Event ID & Component</span>
+                        <div id="node-name" style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">--</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">Timestamp</span>
+                            <div id="node-ts" class="mono" style="font-size: 0.8rem;">--</div>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">Level</span>
+                            <div id="node-level" style="font-weight: 600;">--</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Classified Type</span>
+                        <div id="node-type" class="badge badge-chain" style="display: inline-block; margin-top: 4px;">--</div>
+                    </div>
+
+                    <div style="margin-bottom: 1.25rem;">
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Event Message</span>
+                        <div id="node-msg" class="mono" style="background: var(--bg-dark); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.8rem; margin-top: 4px; border: 1px solid var(--border-subtle);">--</div>
+                    </div>
+
+                    <div id="root-cause-banner" style="display: none; background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; border-radius: var(--radius-sm); padding: 0.75rem; font-size: 0.85rem; color: #fca5a5;">
+                        🚨 <strong>Identified Possible Root Cause:</strong> This event initiated the cascading failure sequence within the evaluated temporal window.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        TraceX Software Failure Investigation Engine &bull; C++17 Core Engine
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/graph.js"></script>
+</body>
+</html>

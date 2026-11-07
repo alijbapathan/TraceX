@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceX - Failure Investigation Report</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">X</div>
+                <span>TraceX</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="explorer.html" class="nav-link">Log Explorer</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="graph.html" class="nav-link">Dependency Graph</a></li>
+                <li><a href="report.html" class="nav-link active">Analysis Report</a></li>
+            </ul>
+            <div class="nav-actions">
+                <select id="run-selector" class="run-select">
+                    <option value="">Loading runs...</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Notice Box -->
+        <div class="notice-box">
+            <strong>Investigation Status:</strong> Evidence-based diagnostic hypothesis generated via temporal clustering and causal rule matching. Not a verified ground-truth cause.
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div>
+                <h1 style="font-size: 1.5rem; font-weight: 700;">Software Failure Investigation Report</h1>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">Comprehensive root-cause hypothesis, cascade evidence chains, what-if simulation, and algorithm comparison.</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+                <button id="export-txt-btn" class="btn btn-secondary">Export as TXT</button>
+                <button id="export-json-btn" class="btn btn-primary">Export as JSON</button>
+            </div>
+        </div>
+
+        <!-- Strategy Selector & Hypothesis Banner -->
+        <div class="card" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Evaluated Hypothesis</span>
+                    <h2 id="report-root-cause" style="font-size: 1.8rem; font-weight: 800; color: #fca5a5; margin: 0.25rem 0;">Evaluating...</h2>
+                    <p id="report-explanation" style="color: var(--text-secondary); font-size: 0.9rem; max-width: 800px;">Analyzing failure sequence...</p>
+                </div>
+                <div style="text-align: right; min-width: 200px;">
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">Confidence Score</div>
+                    <div id="confidence-value" style="font-size: 2.2rem; font-weight: 900; color: var(--accent-red);">--%</div>
+                    <div class="progress-bar-bg" style="width: 180px; margin-left: auto;">
+                        <div id="confidence-bar" class="progress-bar-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Selection Pill -->
+            <div style="display: flex; gap: 0.75rem; align-items: center; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Active Algorithm:</span>
+                <select id="strategy-select" class="select-input">
+                    <option value="rule" selected>Rule-Based Correlation Strategy</option>
+                    <option value="window">Sliding Time-Window Strategy (15s)</option>
+                </select>
+                <span id="exec-time-pill" class="badge badge-info" style="margin-left: 0.5rem;">0.00 ms</span>
+            </div>
+        </div>
+
+        <!-- Correlated Failure Chain & Supporting Evidence -->
+        <div class="grid grid-cols-2" style="margin-bottom: 1.5rem;">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Correlated Failure Chain</span>
+                    <span class="badge badge-chain" id="chain-count-badge">0 Chains</span>
+                </div>
+                <div id="chain-container" style="padding: 0.5rem 0;">
+                    <div style="color: var(--text-muted); font-size: 0.85rem;">No chains found.</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Downstream Supporting Events</span>
+                    <span class="badge badge-error" id="evidence-count-badge">0 Events</span>
+                </div>
+                <div class="table-container" style="max-height: 250px; overflow-y: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#ID</th>
+                                <th>Timestamp</th>
+                                <th>Source</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody id="supporting-tbody">
+                            <tr>
+                                <td colspan="4" style="text-align: center; color: var(--text-muted);">No supporting events.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- What-If Analysis Panel -->
+        <div class="card" style="margin-bottom: 1.5rem; border: 1px solid #6366f1;">
+            <div class="card-header">
+                <div>
+                    <span class="card-title" style="color: #a5b4fc;">🔬 What-If Simulation Engine</span>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+                        Deep-copy the event timeline, suppress candidate failure events, and recalculate new root cause hypothesis.
+                    </p>
+                </div>
+                <button id="run-whatif-btn" class="btn btn-primary" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
+                    Run What-If Simulation
+                </button>
+            </div>
+
+            <div class="grid grid-cols-2" style="gap: 1.25rem;">
+                <!-- Event Selection checkboxes -->
+                <div>
+                    <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Select events to remove/suppress:</span>
+                    <div id="whatif-checkboxes" style="margin-top: 0.5rem; max-height: 200px; overflow-y: auto; background: var(--bg-dark); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                        <div style="color: var(--text-muted); font-size: 0.8rem;">Loading candidate events...</div>
+                    </div>
+                </div>
+
+                <!-- Simulation Diff Result Card -->
+                <div id="whatif-result-card" style="background: var(--bg-dark); border: 1px dashed var(--border-color); border-radius: var(--radius-sm); padding: 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+                        Select events on the left and click "Run What-If Simulation" to see hypothesis shifts.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Algorithm Comparison Panel -->
+        <div class="card" style="margin-bottom: 1.5rem;">
+            <div class="card-header">
+                <div>
+                    <span class="card-title">⚖️ Algorithm Comparison & Benchmarking</span>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+                        Side-by-side performance comparison between Rule-Based Correlation and Sliding Time-Window Strategies.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2" style="gap: 1.5rem; align-items: center;">
+                <!-- Comparison Table -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Strategy</th>
+                                <th>Possible Root Cause</th>
+                                <th>Confidence</th>
+                                <th>Chains</th>
+                                <th>Exec Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparison-tbody">
+                            <tr>
+                                <td colspan="5" style="text-align: center; color: var(--text-muted);">Running benchmark...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="comparison-summary" style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--accent-blue); padding: 0.5rem; background: var(--bg-dark); border-radius: var(--radius-sm);"></div>
+                </div>
+
+                <!-- Comparison Bar Chart -->
+                <div style="height: 220px; position: relative;">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        TraceX Software Failure Investigation Engine &bull; C++17 Core Engine
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/report.js"></script>
+</body>
+</html>

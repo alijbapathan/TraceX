@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceX - Failure Timeline</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">X</div>
+                <span>TraceX</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="explorer.html" class="nav-link">Log Explorer</a></li>
+                <li><a href="timeline.html" class="nav-link active">Timeline</a></li>
+                <li><a href="graph.html" class="nav-link">Dependency Graph</a></li>
+                <li><a href="report.html" class="nav-link">Analysis Report</a></li>
+            </ul>
+            <div class="nav-actions">
+                <select id="run-selector" class="run-select">
+                    <option value="">Loading runs...</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div>
+                <h1 style="font-size: 1.5rem; font-weight: 700;">Chronological Failure Timeline</h1>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">Temporal sequence reconstruction showing root event ignition and subsequent failure cascades.</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <label style="font-size: 0.85rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
+                    <input type="checkbox" id="filter-errors-only" checked>
+                    <span>Show Critical & Chain Events Only</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <span class="card-title">Sequence Progression</span>
+                    <span id="timeline-count" style="font-size: 0.8rem; color: var(--text-muted); margin-left: 0.75rem;">Loading sequence...</span>
+                </div>
+                <div style="display: flex; gap: 0.75rem; font-size: 0.8rem;">
+                    <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #ef4444;"></span> Root / Error</span>
+                    <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #6366f1;"></span> Chain Member</span>
+                    <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #273549;"></span> Normal Noise</span>
+                </div>
+            </div>
+
+            <!-- Timeline sequence container -->
+            <div class="timeline-container" id="timeline-list">
+                <div style="padding: 2rem; text-align: center; color: var(--text-muted);">Loading timeline events...</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Event Detail Modal -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 id="modal-title" style="font-size: 1.15rem; font-weight: 700;">Event Details</h3>
+                <button id="close-modal-btn" style="background:none; border:none; color:var(--text-muted); font-size:1.5rem; cursor:pointer;">&times;</button>
+            </div>
+            <div id="modal-body" class="mono" style="background: var(--bg-dark); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.8rem; overflow-x: auto; white-space: pre-wrap;"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        TraceX Software Failure Investigation Engine &bull; C++17 Core Engine
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/timeline.js"></script>
+</body>
+</html>

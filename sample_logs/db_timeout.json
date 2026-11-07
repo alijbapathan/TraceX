@@ -1,0 +1,500 @@
+{"ts": "2026-11-07 23:57:17", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 12ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-07 23:57:20", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 110ms"}
+{"ts": "2026-11-07 23:57:21", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:24704' (ttl=300s)"}
+{"ts": "2026-11-07 23:57:22", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=17ms"}
+{"ts": "2026-11-07 23:57:25", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 54ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-07 23:57:26", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.51"}
+{"ts": "2026-11-07 23:57:28", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-07 23:57:29", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-07 23:57:31", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-07 23:57:34", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-07 23:57:37", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 426MB"}
+{"ts": "2026-11-07 23:57:38", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 26ms"}
+{"ts": "2026-11-07 23:57:39", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-07 23:57:42", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 47ms"}
+{"ts": "2026-11-07 23:57:45", "level": "INFO", "source": "API", "msg": "PUT /api/v1/settings status=200 duration=42ms"}
+{"ts": "2026-11-07 23:57:48", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-07 23:57:49", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=70ms"}
+{"ts": "2026-11-07 23:57:51", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-07 23:57:53", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 28ms"}
+{"ts": "2026-11-07 23:57:56", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-07 23:57:57", "level": "WARN", "source": "CACHE", "msg": "Latency elevated: Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-07 23:57:59", "level": "ERROR", "source": "DISK", "msg": "Transient error (retried): Log rotation completed for access.log"}
+{"ts": "2026-11-07 23:58:02", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=93ms"}
+{"ts": "2026-11-07 23:58:04", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-07 23:58:06", "level": "ERROR", "source": "API", "msg": "Transient error (retried): GET /api/v1/health status=200 duration=62ms"}
+{"ts": "2026-11-07 23:58:07", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=73253"}
+{"ts": "2026-11-07 23:58:09", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-07 23:58:12", "level": "WARN", "source": "DISK", "msg": "Latency elevated: Write checkpoint flushed to disk in 110ms"}
+{"ts": "2026-11-07 23:58:15", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-07 23:58:17", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-07 23:58:20", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:87171' (ttl=300s)"}
+{"ts": "2026-11-07 23:58:23", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: TCP keep-alive acknowledged from peer 10.0.4.89"}
+{"ts": "2026-11-07 23:58:25", "level": "INFO", "source": "DATABASE", "msg": "Connection pool active with 24 idle connections"}
+{"ts": "2026-11-07 23:58:26", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-07 23:58:29", "level": "ERROR", "source": "DISK", "msg": "Transient error (retried): Write checkpoint flushed to disk in 95ms"}
+{"ts": "2026-11-07 23:58:31", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: Mesh proxy sync completed"}
+{"ts": "2026-11-07 23:58:34", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 90ms"}
+{"ts": "2026-11-07 23:58:35", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-07 23:58:37", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 36ms"}
+{"ts": "2026-11-07 23:58:39", "level": "ERROR", "source": "DISK", "msg": "Transient error (retried): Volume /data free space at 44%"}
+{"ts": "2026-11-07 23:58:40", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.151"}
+{"ts": "2026-11-07 23:58:41", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:62366' (ttl=300s)"}
+{"ts": "2026-11-07 23:58:44", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-60864"}
+{"ts": "2026-11-07 23:58:45", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-07 23:58:46", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 23ms"}
+{"ts": "2026-11-07 23:58:47", "level": "INFO", "source": "AUTH", "msg": "Session cookie validated"}
+{"ts": "2026-11-07 23:58:50", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-07 23:58:52", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 65ms"}
+{"ts": "2026-11-07 23:58:55", "level": "INFO", "source": "DATABASE", "msg": "Connection pool active with 24 idle connections"}
+{"ts": "2026-11-07 23:58:57", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 1408MB"}
+{"ts": "2026-11-07 23:58:59", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 108ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-07 23:59:00", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-07 23:59:03", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 32% of 4096MB"}
+{"ts": "2026-11-07 23:59:04", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-07 23:59:07", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-07 23:59:10", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 692MB"}
+{"ts": "2026-11-07 23:59:12", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-07 23:59:15", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 731MB"}
+{"ts": "2026-11-07 23:59:16", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-07 23:59:18", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-07 23:59:21", "level": "ERROR", "source": "CACHE", "msg": "Transient error (retried): Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-07 23:59:22", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 48%"}
+{"ts": "2026-11-07 23:59:23", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=52ms"}
+{"ts": "2026-11-07 23:59:25", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 28ms"}
+{"ts": "2026-11-07 23:59:26", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-07 23:59:29", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-07 23:59:31", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-07 23:59:33", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 105ms"}
+{"ts": "2026-11-07 23:59:35", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=57ms"}
+{"ts": "2026-11-07 23:59:38", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: Resident memory size stable at 1245MB"}
+{"ts": "2026-11-07 23:59:41", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-07 23:59:43", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 43%"}
+{"ts": "2026-11-07 23:59:45", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-07 23:59:46", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-07 23:59:49", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-07 23:59:52", "level": "INFO", "source": "API", "msg": "POST /api/v1/orders/checkout status=201 duration=15ms"}
+{"ts": "2026-11-07 23:59:54", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 51%"}
+{"ts": "2026-11-07 23:59:56", "level": "WARN", "source": "API", "msg": "Latency elevated: PUT /api/v1/settings status=200 duration=6ms"}
+{"ts": "2026-11-07 23:59:59", "level": "INFO", "source": "NETWORK", "msg": "Outbound request to payment-gateway latency=57ms"}
+{"ts": "2026-11-08 00:00:00", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-08 00:00:01", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:00:04", "level": "WARN", "source": "DATABASE", "msg": "Latency elevated: Query completed in 47ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:00:07", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 49% of 4096MB"}
+{"ts": "2026-11-08 00:00:09", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.163"}
+{"ts": "2026-11-08 00:00:12", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: Token verification succeeded for user_id=95467"}
+{"ts": "2026-11-08 00:00:14", "level": "INFO", "source": "NETWORK", "msg": "Outbound request to payment-gateway latency=19ms"}
+{"ts": "2026-11-08 00:00:15", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:00:17", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:96636' (ttl=300s)"}
+{"ts": "2026-11-08 00:00:20", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:00:21", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 108ms"}
+{"ts": "2026-11-08 00:00:24", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 1688MB"}
+{"ts": "2026-11-08 00:00:25", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:00:26", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:00:29", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 25ms"}
+{"ts": "2026-11-08 00:00:32", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: Token verification succeeded for user_id=32373"}
+{"ts": "2026-11-08 00:00:35", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 60ms"}
+{"ts": "2026-11-08 00:00:38", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:45505' (ttl=300s)"}
+{"ts": "2026-11-08 00:00:39", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 65ms"}
+{"ts": "2026-11-08 00:00:41", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.171"}
+{"ts": "2026-11-08 00:00:42", "level": "INFO", "source": "API", "msg": "PUT /api/v1/settings status=200 duration=89ms"}
+{"ts": "2026-11-08 00:00:45", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 50% of 4096MB"}
+{"ts": "2026-11-08 00:00:46", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=87ms"}
+{"ts": "2026-11-08 00:00:48", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 59%"}
+{"ts": "2026-11-08 00:00:50", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=48ms"}
+{"ts": "2026-11-08 00:00:53", "level": "INFO", "source": "API", "msg": "PUT /api/v1/settings status=200 duration=63ms"}
+{"ts": "2026-11-08 00:00:55", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:00:56", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:00:57", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=61558"}
+{"ts": "2026-11-08 00:01:00", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 39%"}
+{"ts": "2026-11-08 00:01:02", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:51066' (ttl=300s)"}
+{"ts": "2026-11-08 00:01:03", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=47ms"}
+{"ts": "2026-11-08 00:01:04", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=119ms"}
+{"ts": "2026-11-08 00:01:07", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 50% of 4096MB"}
+{"ts": "2026-11-08 00:01:08", "level": "INFO", "source": "API", "msg": "PUT /api/v1/settings status=200 duration=5ms"}
+{"ts": "2026-11-08 00:01:11", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:01:14", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 34ms"}
+{"ts": "2026-11-08 00:01:16", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:01:18", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 100ms"}
+{"ts": "2026-11-08 00:01:21", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:24454' (ttl=300s)"}
+{"ts": "2026-11-08 00:01:24", "level": "WARN", "source": "DATABASE", "msg": "Latency elevated: Query completed in 7ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:01:25", "level": "ERROR", "source": "API", "msg": "Transient error (retried): GET /api/v1/health status=200 duration=20ms"}
+{"ts": "2026-11-08 00:01:26", "level": "INFO", "source": "DATABASE", "msg": "Transaction committed successfully (txn_id=0xd1e5)"}
+{"ts": "2026-11-08 00:01:28", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:01:30", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: JVM heap usage at 43% of 4096MB"}
+{"ts": "2026-11-08 00:01:32", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 1657MB"}
+{"ts": "2026-11-08 00:01:34", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.248"}
+{"ts": "2026-11-08 00:01:35", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=7ms"}
+{"ts": "2026-11-08 00:01:38", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 37ms"}
+{"ts": "2026-11-08 00:01:40", "level": "INFO", "source": "DATABASE", "msg": "Connection pool active with 24 idle connections"}
+{"ts": "2026-11-08 00:01:43", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:01:44", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-08 00:01:46", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:01:47", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:01:49", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:01:50", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:95814' (ttl=300s)"}
+{"ts": "2026-11-08 00:01:53", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 48%"}
+{"ts": "2026-11-08 00:01:55", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:01:56", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:01:57", "level": "ERROR", "source": "MEMORY", "msg": "Transient error (retried): JVM heap usage at 60% of 4096MB"}
+{"ts": "2026-11-08 00:02:00", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:02:02", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.74"}
+{"ts": "2026-11-08 00:02:04", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:02:06", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:02:09", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:16235' (ttl=300s)"}
+{"ts": "2026-11-08 00:02:12", "level": "INFO", "source": "DATABASE", "msg": "Connection pool active with 24 idle connections"}
+{"ts": "2026-11-08 00:02:13", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 23ms"}
+{"ts": "2026-11-08 00:02:14", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 29ms"}
+{"ts": "2026-11-08 00:02:15", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:02:17", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 307MB"}
+{"ts": "2026-11-08 00:02:20", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 65%"}
+{"ts": "2026-11-08 00:02:21", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:02:22", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 106ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:02:24", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 119ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:02:25", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:02:28", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=54110"}
+{"ts": "2026-11-08 00:02:30", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: Garbage collection pause young_gen: 105ms"}
+{"ts": "2026-11-08 00:02:33", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: Outbound request to payment-gateway latency=85ms"}
+{"ts": "2026-11-08 00:02:35", "level": "INFO", "source": "DATABASE", "msg": "Connection pool active with 24 idle connections"}
+{"ts": "2026-11-08 00:02:38", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:02:40", "level": "WARN", "source": "DATABASE", "msg": "Latency elevated: Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-08 00:02:43", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:02:46", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:02:48", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 44ms"}
+{"ts": "2026-11-08 00:02:49", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:02:51", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 37%"}
+{"ts": "2026-11-08 00:02:52", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:43063' (ttl=300s)"}
+{"ts": "2026-11-08 00:02:53", "level": "INFO", "source": "DATABASE", "msg": "Connection pool active with 24 idle connections"}
+{"ts": "2026-11-08 00:02:56", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:02:59", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=109ms"}
+{"ts": "2026-11-08 00:03:01", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:03:02", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:03:03", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:03:06", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 24ms"}
+{"ts": "2026-11-08 00:03:09", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 44ms"}
+{"ts": "2026-11-08 00:03:11", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:03:12", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 49% of 4096MB"}
+{"ts": "2026-11-08 00:03:15", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-51939"}
+{"ts": "2026-11-08 00:03:17", "level": "INFO", "source": "AUTH", "msg": "Session cookie validated"}
+{"ts": "2026-11-08 00:03:18", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:03:19", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:03:20", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:03:23", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:03:26", "level": "WARN", "source": "API", "msg": "Latency elevated: GET /api/v1/health status=200 duration=115ms"}
+{"ts": "2026-11-08 00:03:28", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 9ms"}
+{"ts": "2026-11-08 00:03:31", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-38202"}
+{"ts": "2026-11-08 00:03:34", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=96860"}
+{"ts": "2026-11-08 00:03:35", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 56ms"}
+{"ts": "2026-11-08 00:03:36", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:03:37", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 818MB"}
+{"ts": "2026-11-08 00:03:39", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:03:42", "level": "INFO", "source": "DATABASE", "msg": "Connection pool active with 24 idle connections"}
+{"ts": "2026-11-08 00:03:43", "level": "WARN", "source": "API", "msg": "Latency elevated: PUT /api/v1/settings status=200 duration=64ms"}
+{"ts": "2026-11-08 00:03:45", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 55ms"}
+{"ts": "2026-11-08 00:03:46", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 54%"}
+{"ts": "2026-11-08 00:03:49", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 1529MB"}
+{"ts": "2026-11-08 00:03:52", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:03:54", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 60%"}
+{"ts": "2026-11-08 00:03:57", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:04:00", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 6ms"}
+{"ts": "2026-11-08 00:04:01", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 952MB"}
+{"ts": "2026-11-08 00:03:55", "level": "ERROR", "source": "DATABASE", "msg": "Connection timeout: pool exhausted after 30000ms"}
+{"ts": "2026-11-08 00:03:56", "level": "ERROR", "source": "API", "msg": "GET /api/v1/orders/checkout returned 500 Internal Server Error (DB connection pool timeout)"}
+{"ts": "2026-11-08 00:03:57", "level": "ERROR", "source": "API", "msg": "POST /api/v1/users/login returned 500 Database query execution failed"}
+{"ts": "2026-11-08 00:03:58", "level": "FATAL", "source": "DATABASE", "msg": "Deadlock detected during rollback of transaction 0x9AF2"}
+{"ts": "2026-11-08 00:03:59", "level": "ERROR", "source": "API", "msg": "GET /api/v1/catalog returned 503 Service Unavailable: DB backend down"}
+{"ts": "2026-11-08 00:04:01", "level": "ERROR", "source": "API", "msg": "POST /api/v1/payments returned 500 Connection to replica database refused"}
+{"ts": "2026-11-08 00:04:14", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:04:15", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 34% of 4096MB"}
+{"ts": "2026-11-08 00:04:18", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-08 00:04:20", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:04:23", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:04:26", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:04:28", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 74ms"}
+{"ts": "2026-11-08 00:04:30", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:04:31", "level": "INFO", "source": "API", "msg": "POST /api/v1/orders/checkout status=201 duration=114ms"}
+{"ts": "2026-11-08 00:04:32", "level": "WARN", "source": "DISK", "msg": "Latency elevated: Write checkpoint flushed to disk in 110ms"}
+{"ts": "2026-11-08 00:04:35", "level": "INFO", "source": "API", "msg": "PUT /api/v1/settings status=200 duration=11ms"}
+{"ts": "2026-11-08 00:04:36", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 102ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:04:38", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:04:40", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:04:43", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 103ms"}
+{"ts": "2026-11-08 00:04:45", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:04:47", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:04:50", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-08 00:04:51", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 97ms"}
+{"ts": "2026-11-08 00:04:52", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=45025"}
+{"ts": "2026-11-08 00:04:53", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: OAuth2 session refreshed for client_id=app-90640"}
+{"ts": "2026-11-08 00:04:55", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-17330"}
+{"ts": "2026-11-08 00:04:57", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=33ms"}
+{"ts": "2026-11-08 00:04:59", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 522MB"}
+{"ts": "2026-11-08 00:05:00", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:05:02", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-76207"}
+{"ts": "2026-11-08 00:05:03", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:05:04", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 609MB"}
+{"ts": "2026-11-08 00:05:07", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=11799"}
+{"ts": "2026-11-08 00:05:09", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 109ms"}
+{"ts": "2026-11-08 00:05:11", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-53093"}
+{"ts": "2026-11-08 00:05:12", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:05:13", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:05:14", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:05:15", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 59%"}
+{"ts": "2026-11-08 00:05:16", "level": "ERROR", "source": "DISK", "msg": "Transient error (retried): Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:05:19", "level": "INFO", "source": "API", "msg": "PUT /api/v1/settings status=200 duration=45ms"}
+{"ts": "2026-11-08 00:05:20", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 9ms"}
+{"ts": "2026-11-08 00:05:23", "level": "WARN", "source": "API", "msg": "Latency elevated: GET /api/v1/health status=200 duration=95ms"}
+{"ts": "2026-11-08 00:05:26", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.167"}
+{"ts": "2026-11-08 00:05:27", "level": "INFO", "source": "API", "msg": "POST /api/v1/orders/checkout status=201 duration=82ms"}
+{"ts": "2026-11-08 00:05:29", "level": "WARN", "source": "DISK", "msg": "Latency elevated: Write checkpoint flushed to disk in 17ms"}
+{"ts": "2026-11-08 00:05:30", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 1427MB"}
+{"ts": "2026-11-08 00:05:32", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 1009MB"}
+{"ts": "2026-11-08 00:05:33", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:05:35", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:05:37", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:05:39", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=81ms"}
+{"ts": "2026-11-08 00:05:41", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 83ms"}
+{"ts": "2026-11-08 00:05:42", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:92563' (ttl=300s)"}
+{"ts": "2026-11-08 00:05:44", "level": "WARN", "source": "DATABASE", "msg": "Latency elevated: Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-08 00:05:46", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:05:49", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:05:52", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 51%"}
+{"ts": "2026-11-08 00:05:53", "level": "ERROR", "source": "NETWORK", "msg": "Transient error (retried): Outbound request to payment-gateway latency=33ms"}
+{"ts": "2026-11-08 00:05:56", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.94"}
+{"ts": "2026-11-08 00:05:57", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:05:58", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:06:00", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:06:01", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:06:02", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:06:04", "level": "INFO", "source": "AUTH", "msg": "Session cookie validated"}
+{"ts": "2026-11-08 00:06:05", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:06:08", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:06:09", "level": "INFO", "source": "AUTH", "msg": "Session cookie validated"}
+{"ts": "2026-11-08 00:06:11", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 36%"}
+{"ts": "2026-11-08 00:06:13", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:06:15", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=47353"}
+{"ts": "2026-11-08 00:06:18", "level": "ERROR", "source": "DISK", "msg": "Transient error (retried): Write checkpoint flushed to disk in 15ms"}
+{"ts": "2026-11-08 00:06:19", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:06:20", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: Garbage collection pause young_gen: 43ms"}
+{"ts": "2026-11-08 00:06:22", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: OAuth2 session refreshed for client_id=app-81633"}
+{"ts": "2026-11-08 00:06:23", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:06:26", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-08 00:06:29", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 110ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:06:32", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:06:35", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: JVM heap usage at 30% of 4096MB"}
+{"ts": "2026-11-08 00:06:38", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:06:39", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:60529' (ttl=300s)"}
+{"ts": "2026-11-08 00:06:40", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=78ms"}
+{"ts": "2026-11-08 00:06:41", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:06:42", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 749MB"}
+{"ts": "2026-11-08 00:06:44", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: TCP keep-alive acknowledged from peer 10.0.4.226"}
+{"ts": "2026-11-08 00:06:47", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=78ms"}
+{"ts": "2026-11-08 00:06:48", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: JVM heap usage at 50% of 4096MB"}
+{"ts": "2026-11-08 00:06:49", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 60ms"}
+{"ts": "2026-11-08 00:06:51", "level": "WARN", "source": "API", "msg": "Latency elevated: POST /api/v1/orders/checkout status=201 duration=27ms"}
+{"ts": "2026-11-08 00:06:53", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=84057"}
+{"ts": "2026-11-08 00:06:56", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 105ms"}
+{"ts": "2026-11-08 00:06:57", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 37ms"}
+{"ts": "2026-11-08 00:07:00", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 34ms"}
+{"ts": "2026-11-08 00:07:03", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:07:06", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 44ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:07:07", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 68ms"}
+{"ts": "2026-11-08 00:07:09", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:07:12", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:07:15", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:07:18", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:07:19", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.24"}
+{"ts": "2026-11-08 00:07:21", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:07:23", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: Session cookie validated"}
+{"ts": "2026-11-08 00:07:26", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:07:28", "level": "INFO", "source": "API", "msg": "PUT /api/v1/settings status=200 duration=81ms"}
+{"ts": "2026-11-08 00:07:31", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-78518"}
+{"ts": "2026-11-08 00:07:34", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 41ms"}
+{"ts": "2026-11-08 00:07:35", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.173"}
+{"ts": "2026-11-08 00:07:38", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:07:41", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:98006' (ttl=300s)"}
+{"ts": "2026-11-08 00:07:44", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=77468"}
+{"ts": "2026-11-08 00:07:46", "level": "INFO", "source": "NETWORK", "msg": "TCP keep-alive acknowledged from peer 10.0.4.131"}
+{"ts": "2026-11-08 00:07:49", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:07:51", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:07:52", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=52ms"}
+{"ts": "2026-11-08 00:07:53", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:07:56", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:07:57", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 1530MB"}
+{"ts": "2026-11-08 00:07:58", "level": "ERROR", "source": "CACHE", "msg": "Transient error (retried): Cache hit for key 'product:57521' (ttl=300s)"}
+{"ts": "2026-11-08 00:08:01", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 855MB"}
+{"ts": "2026-11-08 00:08:04", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: Public key rotated successfully"}
+{"ts": "2026-11-08 00:08:07", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 63ms"}
+{"ts": "2026-11-08 00:08:10", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 6ms"}
+{"ts": "2026-11-08 00:08:12", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:08:13", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:08:14", "level": "INFO", "source": "API", "msg": "POST /api/v1/orders/checkout status=201 duration=59ms"}
+{"ts": "2026-11-08 00:08:17", "level": "WARN", "source": "API", "msg": "Latency elevated: POST /api/v1/orders/checkout status=201 duration=110ms"}
+{"ts": "2026-11-08 00:08:20", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=111ms"}
+{"ts": "2026-11-08 00:08:23", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 61ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:08:25", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 49%"}
+{"ts": "2026-11-08 00:08:26", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: JVM heap usage at 31% of 4096MB"}
+{"ts": "2026-11-08 00:08:29", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 45ms"}
+{"ts": "2026-11-08 00:08:31", "level": "INFO", "source": "AUTH", "msg": "Session cookie validated"}
+{"ts": "2026-11-08 00:08:33", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:08:36", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-08 00:08:37", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:08:38", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:08:41", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: Resident memory size stable at 1505MB"}
+{"ts": "2026-11-08 00:08:43", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 116ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:08:44", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-08 00:08:45", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 25ms"}
+{"ts": "2026-11-08 00:08:46", "level": "INFO", "source": "API", "msg": "PUT /api/v1/settings status=200 duration=19ms"}
+{"ts": "2026-11-08 00:08:48", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:08:51", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:08:52", "level": "WARN", "source": "API", "msg": "Latency elevated: GET /api/v1/health status=200 duration=106ms"}
+{"ts": "2026-11-08 00:08:54", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:08:56", "level": "WARN", "source": "DATABASE", "msg": "Latency elevated: Periodic vacuum completed in 65ms"}
+{"ts": "2026-11-08 00:08:59", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:09:02", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:09:05", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 54%"}
+{"ts": "2026-11-08 00:09:06", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 16ms"}
+{"ts": "2026-11-08 00:09:09", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 31%"}
+{"ts": "2026-11-08 00:09:12", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 68ms"}
+{"ts": "2026-11-08 00:09:14", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:09:16", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 37% of 4096MB"}
+{"ts": "2026-11-08 00:09:19", "level": "INFO", "source": "DATABASE", "msg": "Connection pool active with 24 idle connections"}
+{"ts": "2026-11-08 00:09:21", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=32ms"}
+{"ts": "2026-11-08 00:09:24", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:09:27", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=36ms"}
+{"ts": "2026-11-08 00:09:30", "level": "WARN", "source": "API", "msg": "Latency elevated: GET /api/v1/users/profile status=200 duration=100ms"}
+{"ts": "2026-11-08 00:09:32", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:09:35", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:09:36", "level": "WARN", "source": "CACHE", "msg": "Latency elevated: Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:09:38", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:09:39", "level": "ERROR", "source": "CACHE", "msg": "Transient error (retried): Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:09:41", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 32ms"}
+{"ts": "2026-11-08 00:09:44", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:09:47", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:09:49", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 53ms"}
+{"ts": "2026-11-08 00:09:50", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:78808' (ttl=300s)"}
+{"ts": "2026-11-08 00:09:53", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=58ms"}
+{"ts": "2026-11-08 00:09:54", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:09:56", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:09:58", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:09:59", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:10:00", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 48%"}
+{"ts": "2026-11-08 00:10:02", "level": "WARN", "source": "DISK", "msg": "Latency elevated: Volume /data free space at 65%"}
+{"ts": "2026-11-08 00:10:05", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 1191MB"}
+{"ts": "2026-11-08 00:10:07", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 496MB"}
+{"ts": "2026-11-08 00:10:09", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 65% of 4096MB"}
+{"ts": "2026-11-08 00:10:12", "level": "WARN", "source": "NETWORK", "msg": "Latency elevated: TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:10:14", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=30ms"}
+{"ts": "2026-11-08 00:10:15", "level": "INFO", "source": "API", "msg": "POST /api/v1/orders/checkout status=201 duration=85ms"}
+{"ts": "2026-11-08 00:10:17", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-08 00:10:19", "level": "WARN", "source": "API", "msg": "Latency elevated: GET /api/v1/health status=200 duration=57ms"}
+{"ts": "2026-11-08 00:10:20", "level": "WARN", "source": "DATABASE", "msg": "Latency elevated: Query completed in 30ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:10:21", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:10:23", "level": "WARN", "source": "AUTH", "msg": "Latency elevated: Token verification succeeded for user_id=96141"}
+{"ts": "2026-11-08 00:10:26", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 30ms"}
+{"ts": "2026-11-08 00:10:27", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:10:30", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:10:32", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:10:34", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:38120' (ttl=300s)"}
+{"ts": "2026-11-08 00:10:37", "level": "WARN", "source": "DATABASE", "msg": "Latency elevated: Periodic vacuum completed in 59ms"}
+{"ts": "2026-11-08 00:10:39", "level": "INFO", "source": "DATABASE", "msg": "Transaction committed successfully (txn_id=0x219f)"}
+{"ts": "2026-11-08 00:10:40", "level": "INFO", "source": "DATABASE", "msg": "Read replica health check OK"}
+{"ts": "2026-11-08 00:10:42", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=80ms"}
+{"ts": "2026-11-08 00:10:45", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 630MB"}
+{"ts": "2026-11-08 00:10:46", "level": "INFO", "source": "NETWORK", "msg": "Outbound request to payment-gateway latency=20ms"}
+{"ts": "2026-11-08 00:10:49", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=52ms"}
+{"ts": "2026-11-08 00:10:51", "level": "INFO", "source": "DATABASE", "msg": "Transaction committed successfully (txn_id=0x14dd)"}
+{"ts": "2026-11-08 00:10:54", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:10:57", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:10:58", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:11:01", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:11:02", "level": "INFO", "source": "API", "msg": "POST /api/v1/orders/checkout status=201 duration=7ms"}
+{"ts": "2026-11-08 00:11:04", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 1004MB"}
+{"ts": "2026-11-08 00:11:05", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:11:06", "level": "WARN", "source": "API", "msg": "Latency elevated: GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:11:07", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:11:08", "level": "INFO", "source": "API", "msg": "POST /api/v1/orders/checkout status=201 duration=41ms"}
+{"ts": "2026-11-08 00:11:11", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:11:12", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 101ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:11:15", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:11:17", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:54692' (ttl=300s)"}
+{"ts": "2026-11-08 00:11:18", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=116ms"}
+{"ts": "2026-11-08 00:11:20", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 36ms"}
+{"ts": "2026-11-08 00:11:21", "level": "INFO", "source": "DATABASE", "msg": "Periodic vacuum completed in 73ms"}
+{"ts": "2026-11-08 00:11:23", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:11:24", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:11:25", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:11:28", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-94296"}
+{"ts": "2026-11-08 00:11:29", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:11:31", "level": "INFO", "source": "DATABASE", "msg": "Query completed in 57ms: SELECT count(*) FROM orders"}
+{"ts": "2026-11-08 00:11:34", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-08 00:11:36", "level": "INFO", "source": "AUTH", "msg": "Session cookie validated"}
+{"ts": "2026-11-08 00:11:37", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: Arena allocator reclaimed 1478MB"}
+{"ts": "2026-11-08 00:11:40", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 29ms"}
+{"ts": "2026-11-08 00:11:43", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:11:44", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=109ms"}
+{"ts": "2026-11-08 00:11:47", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:11:48", "level": "ERROR", "source": "MEMORY", "msg": "Transient error (retried): Garbage collection pause young_gen: 76ms"}
+{"ts": "2026-11-08 00:11:50", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-08 00:11:51", "level": "INFO", "source": "DATABASE", "msg": "Transaction committed successfully (txn_id=0x4d76)"}
+{"ts": "2026-11-08 00:11:54", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:11:55", "level": "INFO", "source": "NETWORK", "msg": "DNS resolution for cluster.internal completed in 2ms"}
+{"ts": "2026-11-08 00:11:58", "level": "INFO", "source": "MEMORY", "msg": "Arena allocator reclaimed 406MB"}
+{"ts": "2026-11-08 00:11:59", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:12:02", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=88ms"}
+{"ts": "2026-11-08 00:12:03", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:12:05", "level": "INFO", "source": "AUTH", "msg": "Session cookie validated"}
+{"ts": "2026-11-08 00:12:07", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:12:10", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:12:11", "level": "ERROR", "source": "CACHE", "msg": "Transient error (retried): Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:12:13", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:12:16", "level": "INFO", "source": "NETWORK", "msg": "Mesh proxy sync completed"}
+{"ts": "2026-11-08 00:12:19", "level": "INFO", "source": "API", "msg": "GET /api/v1/catalog/items?page=1 status=200 duration=56ms"}
+{"ts": "2026-11-08 00:12:20", "level": "INFO", "source": "NETWORK", "msg": "TLS handshake succeeded with partner API"}
+{"ts": "2026-11-08 00:12:21", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 32%"}
+{"ts": "2026-11-08 00:12:23", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:12:25", "level": "INFO", "source": "DATABASE", "msg": "Executing SELECT * FROM users WHERE active = true"}
+{"ts": "2026-11-08 00:12:27", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-77731"}
+{"ts": "2026-11-08 00:12:28", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:12:31", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 97ms"}
+{"ts": "2026-11-08 00:12:32", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 78ms"}
+{"ts": "2026-11-08 00:12:35", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:12:38", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 84ms"}
+{"ts": "2026-11-08 00:12:40", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 1734MB"}
+{"ts": "2026-11-08 00:12:43", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-80575"}
+{"ts": "2026-11-08 00:12:46", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 45%"}
+{"ts": "2026-11-08 00:12:48", "level": "WARN", "source": "DISK", "msg": "Latency elevated: Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:12:51", "level": "INFO", "source": "MEMORY", "msg": "Resident memory size stable at 1752MB"}
+{"ts": "2026-11-08 00:12:53", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 29ms"}
+{"ts": "2026-11-08 00:12:54", "level": "INFO", "source": "CACHE", "msg": "Cache hit for key 'product:17619' (ttl=300s)"}
+{"ts": "2026-11-08 00:12:55", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=108ms"}
+{"ts": "2026-11-08 00:12:58", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:12:59", "level": "INFO", "source": "CACHE", "msg": "Eviction policy LRU ran, 0 keys evicted"}
+{"ts": "2026-11-08 00:13:01", "level": "WARN", "source": "DATABASE", "msg": "Latency elevated: Periodic vacuum completed in 68ms"}
+{"ts": "2026-11-08 00:13:04", "level": "WARN", "source": "API", "msg": "Latency elevated: GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:13:07", "level": "INFO", "source": "NETWORK", "msg": "Ingress packet rate within normal thresholds"}
+{"ts": "2026-11-08 00:13:08", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=72688"}
+{"ts": "2026-11-08 00:13:10", "level": "INFO", "source": "AUTH", "msg": "Token verification succeeded for user_id=81038"}
+{"ts": "2026-11-08 00:13:11", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:13:13", "level": "INFO", "source": "AUTH", "msg": "Session cookie validated"}
+{"ts": "2026-11-08 00:13:14", "level": "INFO", "source": "DISK", "msg": "Write checkpoint flushed to disk in 31ms"}
+{"ts": "2026-11-08 00:13:16", "level": "INFO", "source": "NETWORK", "msg": "Outbound request to payment-gateway latency=18ms"}
+{"ts": "2026-11-08 00:13:17", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:13:19", "level": "WARN", "source": "DISK", "msg": "Latency elevated: Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:13:21", "level": "INFO", "source": "DISK", "msg": "Volume /data free space at 60%"}
+{"ts": "2026-11-08 00:13:22", "level": "WARN", "source": "CACHE", "msg": "Latency elevated: Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:13:23", "level": "INFO", "source": "AUTH", "msg": "RBAC permissions validated for role=editor"}
+{"ts": "2026-11-08 00:13:24", "level": "INFO", "source": "API", "msg": "GET /metrics scraped successfully"}
+{"ts": "2026-11-08 00:13:25", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=116ms"}
+{"ts": "2026-11-08 00:13:26", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:13:29", "level": "INFO", "source": "MEMORY", "msg": "Buffer cache utilization normal"}
+{"ts": "2026-11-08 00:13:31", "level": "INFO", "source": "API", "msg": "GET /api/v1/health status=200 duration=111ms"}
+{"ts": "2026-11-08 00:13:32", "level": "INFO", "source": "AUTH", "msg": "OAuth2 session refreshed for client_id=app-82220"}
+{"ts": "2026-11-08 00:13:34", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:13:35", "level": "INFO", "source": "AUTH", "msg": "Public key rotated successfully"}
+{"ts": "2026-11-08 00:13:38", "level": "INFO", "source": "MEMORY", "msg": "JVM heap usage at 52% of 4096MB"}
+{"ts": "2026-11-08 00:13:41", "level": "INFO", "source": "DISK", "msg": "Log rotation completed for access.log"}
+{"ts": "2026-11-08 00:13:44", "level": "INFO", "source": "API", "msg": "GET /api/v1/users/profile status=200 duration=76ms"}
+{"ts": "2026-11-08 00:13:45", "level": "INFO", "source": "CACHE", "msg": "Cache warm-up completed for top 100 items"}
+{"ts": "2026-11-08 00:13:47", "level": "INFO", "source": "CACHE", "msg": "Redis cluster slot verification OK"}
+{"ts": "2026-11-08 00:13:48", "level": "WARN", "source": "MEMORY", "msg": "Latency elevated: Resident memory size stable at 1792MB"}
+{"ts": "2026-11-08 00:13:51", "level": "INFO", "source": "MEMORY", "msg": "Garbage collection pause young_gen: 69ms"}
